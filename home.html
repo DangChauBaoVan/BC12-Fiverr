@@ -5,19 +5,954 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiverr</title>
+
+    <!-- Bootstrap v4.6 inserted -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./CSS/home.css">
 </head>
 <body>
-    <header></header>
-    <section class="carousel"></section>
-    <section class="services"></section>
-    <section class="freelance"></section>
-    <section class="marketplace"></section>
-    <section class="business"></section>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top w-100 d-block">
+            <div class="w-100 navbarMain" id="navbarMain">
+                <span>fiverr.</span>
+                <form class="form-inline ml-5 w-25" id="formOnScroll">
+                    <label class="sr-only" for="inlineFormInputName2">Search</label>
+                    <input type="text" class="form-control w-75" id="inlineFormInputName2" placeholder="Find Service">
+    
+                    <button type="submit" class="btn w-25">Search</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-nav ml-auto" id="listChangeColor">
+                        <a class="nav-link active" href="#">Fiverr Business<span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="#">Explore</a>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-globe"> English</i>
+    
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">English</a>
+                                <a class="dropdown-item" href="#">Deutsch</a>
+                                <!-- <div class="dropdown-divider"></div> -->
+                                <a class="dropdown-item" href="#">Espanol</a>
+                                <a class="dropdown-item" href="#">Français</a>
+                                <a class="dropdown-item" href="#">Portuguese</a>
+                                <a class="dropdown-item" href="#">Italiano</a>
+                                <a class="dropdown-item" href="#">Netherlands</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-dollar-sign"> USD</i>
+    
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">United States Dollar (USD) - <i
+                                        class="fa fa-dollar-sign"></i></a>
+                                <a class="dropdown-item" href="#">Euro (EUR) - <i class="fa fa-euro-sign"></i></a>
+                                <!-- <div class="dropdown-divider"></div> -->
+                                <a class="dropdown-item" href="#">Brittish Pound (GBP) - <i
+                                        class="fa fa-pound-sign"></i></a>
+                                <a class="dropdown-item" href="#">Australian Dollar (AUD) - A<i
+                                        class="fa fa-dollar-sign"></i></a>
+                                <a class="dropdown-item" href="#">Canadian Dollar (CAD) - C<i
+                                        class="fa fa-dollar-sign"></i></a>
+    
+                            </div>
+                        </li>
+                        <a class="nav-link active" href="#">Become a Seller</a>
+                        <a class="nav-link active" href="#">Sign in</a>
+                        <a class="nav-link active" href="#">Agents</a>
+                        <a class="nav-link active" href="#">Contact</a>
+                        <button class="btn btn-success">Join</button>
+                        <!-- <a class="nav-link disabled" href="#" tabindex="-1"     aria-disabled="true">Disabled</a> -->
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- Subnavbar -->
+            <div class="subNavbar w-100" id="subNavbar">
+    
+                <!-- D1 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Graphics & Design</button>
+                    <div class="dropdown-content0">
+                        <div class="grid4col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <p class="dropdown-header">Logo & Brand Identity</p>
+                                <a class="dropdown-item" ref="#">Logo Design</a>
+                                <a class="dropdown-item" ref="#">Brand Style Guide</a>
+                                <a class="dropdown-item" ref="#">Business Card & Stationery</a>
+    
+                                <p class="dropdown-header">Gaming</p>
+                                <a class="dropdown-item" href="#">Game Art</a>
+                                <a class="dropdown-item" href="#">Graphics for Streamer</a>
+                                <a class="dropdown-item" href="#">Twitch store</a>
+    
+                                <p class="dropdown-header">Art & Illustration</p>
+                                <a class="dropdown-item" href="#">Illustration</a>
+                                <a class="dropdown-item" href="#">Pattern Design</a>
+                                <a class="dropdown-item" href="#">Packaging Design</a>
+                                <a class="dropdown-item" href="#">Brochure Design</a>
+                                <a class="dropdown-item" href="#">Potrait and Caricatures</a>
+                                <a class="dropdown-item" href="#">Tatoo Design</a>
+    
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <p class="dropdown-header">Web & App</p>
+                                <a class="dropdown-item" ref="#">Web Design</a>
+                                <a class="dropdown-item" ref="#">App Design</a>
+                                <a class="dropdown-item" ref="#">UX Design</a>
+                                <a class="dropdown-item" ref="#">Landing Page Design</a>
+                                <a class="dropdown-item" ref="#">Social Media Design</a>
+                                <a class="dropdown-item" ref="#">Email Design</a>
+                                <a class="dropdown-item" ref="#">Icon Design</a>
+                                <a class="dropdown-item" ref="#">Filter & Lenses</a>
+                                <a class="dropdown-item" ref="#">Web Banners</a>
+    
+                                <p class="dropdown-header">Packaging & Labels</p>
+                                <a class="dropdown-item" href="#">Book Design</a>
+                                <a class="dropdown-item" href="#">Album Design</a>
+                                <a class="dropdown-item" href="#">Potcast Cover</a>
+                                <a class="dropdown-item" href="#">Packaging Design</a>
+                                <a class="dropdown-item" href="#">Car Wraps</a>
+                                <a class="dropdown-item" href="#">Tatoo Design</a>
+    
+                            </div>
+                            <!-- Col 3 -->
+                            <div class="w-100">
+                                <p class="dropdown-header">Visual Design</p>
+                                <a class="dropdown-item" ref="#">Photoshop Editing</a>
+                                <a class="dropdown-item" ref="#">Presentation Design</a>
+                                <a class="dropdown-item" ref="#">Infographic Design</a>
+                                <a class="dropdown-item" ref="#">Vector Tracing</a>
+                                <a class="dropdown-item" ref="#">Resume Tracking</a>
+    
+                                <p class="dropdown-header"><u>Architecture & Building Design</u></p>
+                                <a class="dropdown-item" href="#">Architecture & Interior Design</a>
+                                <a class="dropdown-item" href="#">Landscape Design</a>
+                                <a class="dropdown-item" href="#">Building Information Modeling</a>
+    
+                                <p class="dropdown-header">Fashion & Merchandise</p>
+                                <a class="dropdown-item" href="#">Fashion Design</a>
+                                <a class="dropdown-item" href="#">T-Shirts & Merchandise</a>
+                                <a class="dropdown-item" href="#">Jewelry Design</a>
+    
+                            </div>
+                            <!-- Col 4 -->
+                            <div class="w-100">
+                                <p class="dropdown-header">Print Design</p>
+                                <a class="dropdown-item" ref="#">Flyer Design</a>
+                                <a class="dropdown-item" ref="#">Brochure Design</a>
+                                <a class="dropdown-item" ref="#">Signage Design</a>
+                                <a class="dropdown-item" ref="#">Poster Design</a>
+                                <a class="dropdown-item" ref="#">Catalog Design</a>
+                                <a class="dropdown-item" ref="#">Menu Design</a>
+                                <a class="dropdown-item" ref="#">Postcard Design</a>
+                                <a class="dropdown-item" ref="#">Invitation Design</a>
+    
+                                <p class="dropdown-header">Product & Characters Design</p>
+                                <a class="dropdown-item" href="#">Industrial & Product Design</a>
+                                <a class="dropdown-item" href="#">Character Modeling</a>
+                                <a class="dropdown-item" href="#">Trade Booth Design</a>
+    
+                                <p class="dropdown-header">Misc</p>
+                                <a class="dropdown-item" href="#">Other</a>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- D2 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Digital Marketing</button>
+                    <div class="dropdown-content0">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                                <a class="dropdown-item" ref="#">Public Relations</a>
+                                <a class="dropdown-item" ref="#">Content Marketing</a>
+                                <a class="dropdown-item" ref="#">Video Marketing</a>
+                                <a class="dropdown-item" ref="#">Email Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Analytics</a>
+                                <a class="dropdown-item" ref="#">Crowdfunding</a>
+                                <a class="dropdown-item" ref="#">Poster Design</a>
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                                <a class="dropdown-item" ref="#">Community Management</a>
+                                <a class="dropdown-item" ref="#">Mobile App Marketing</a>
+                                <a class="dropdown-item" ref="#">Music Promotion</a>
+                                <a class="dropdown-item" ref="#">Book & eBook Marketing</a>
+                                <a class="dropdown-item" ref="#">Affiliate Marketing</a>
+                                <a class="dropdown-item" ref="#">Podcast Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Traffic</a>
+                                <a class="dropdown-item" ref="#">Other</a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <!-- D3 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Writing & Translation</button>
+                    <div class="dropdown-content0">
+                        <div class="grid3col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Articles & Blog Posts</a>
+                                <a class="dropdown-item" ref="#">Translation</a>
+                                <a class="dropdown-item" ref="#">Proofreading & Editing</a>
+                                <a class="dropdown-item" ref="#">Resume Writing</a>
+                                <a class="dropdown-item" ref="#">Cover Letters</a>
+                                <a class="dropdown-item" ref="#">Ad Copy</a>
+                                <a class="dropdown-item" ref="#">Sales Copy</a>
+                                <a class="dropdown-item" ref="#">Social Media Copy</a>
+                                <a class="dropdown-item" ref="#">Email Copy</a>
+                                <a class="dropdown-item" ref="#">Case Studies</a>
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Book & eBook Writing</a>
+                                <a class="dropdown-item" ref="#">Book Editing</a>
+                                <a class="dropdown-item" ref="#">Scriptwriting</a>
+                                <a class="dropdown-item" ref="#">Podcast Writing</a>
+                                <a class="dropdown-item" ref="#">Beta Reading</a>
+                                <a class="dropdown-item" ref="#">Creative Writing</a>
+                                <a class="dropdown-item" ref="#">Brand Voice & Tone</a>
+                                <a class="dropdown-item" ref="#">UX Writing</a>
+                                <a class="dropdown-item" ref="#">Speechwriting</a>
+                                <a class="dropdown-item" ref="#">eLearning Content Development</a>
+                            </div>
+                            <!-- Col 3 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">White Papers</a>
+                                <a class="dropdown-item" ref="#">Website Content</a>
+                                <a class="dropdown-item" ref="#">Product Descriptions</a>
+                                <a class="dropdown-item" ref="#">Press Releases</a>
+                                <a class="dropdown-item" ref="#">Business Names & Slogans</a>
+                                <a class="dropdown-item" ref="#">Technical Writing</a>
+                                <a class="dropdown-item" ref="#">Legal Writing</a>
+                                <a class="dropdown-item" ref="#">Grant Writing</a>
+                                <a class="dropdown-item" ref="#">Transcripts</a>
+                                <a class="dropdown-item" ref="#">Research & Summaries</a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- D4 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Video & Animation</button>
+                    <div class="dropdown-content0">
+                        <div class="grid3col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Articles & Blog Posts</a>
+                                <a class="dropdown-item" ref="#">Translation</a>
+                                <a class="dropdown-item" ref="#">Proofreading & Editing</a>
+                                <a class="dropdown-item" ref="#">Resume Writing</a>
+                                <a class="dropdown-item" ref="#">Cover Letters</a>
+                                <a class="dropdown-item" ref="#">Ad Copy</a>
+                                <a class="dropdown-item" ref="#">Sales Copy</a>
+                                <a class="dropdown-item" ref="#">Social Media Copy</a>
+                                <a class="dropdown-item" ref="#">Email Copy</a>
+                                <a class="dropdown-item" ref="#">Case Studies</a>
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Book & eBook Writing</a>
+                                <a class="dropdown-item" ref="#">Book Editing</a>
+                                <a class="dropdown-item" ref="#">Scriptwriting</a>
+                                <a class="dropdown-item" ref="#">Podcast Writing</a>
+                                <a class="dropdown-item" ref="#">Beta Reading</a>
+                                <a class="dropdown-item" ref="#">Creative Writing</a>
+                                <a class="dropdown-item" ref="#">Brand Voice & Tone</a>
+                                <a class="dropdown-item" ref="#">UX Writing</a>
+                                <a class="dropdown-item" ref="#">Speechwriting</a>
+                                <a class="dropdown-item" ref="#">eLearning Content Development</a>
+                            </div>
+                            <!-- Col 3 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">White Papers</a>
+                                <a class="dropdown-item" ref="#">Website Content</a>
+                                <a class="dropdown-item" ref="#">Product Descriptions</a>
+                                <a class="dropdown-item" ref="#">Press Releases</a>
+                                <a class="dropdown-item" ref="#">Business Names & Slogans</a>
+                                <a class="dropdown-item" ref="#">Technical Writing</a>
+                                <a class="dropdown-item" ref="#">Legal Writing</a>
+                                <a class="dropdown-item" ref="#">Grant Writing</a>
+                                <a class="dropdown-item" ref="#">Transcripts</a>
+                                <a class="dropdown-item" ref="#">Research & Summaries</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- D5 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Music & Audio</button>
+                    <div class="dropdown-content0">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                                <a class="dropdown-item" ref="#">Public Relations</a>
+                                <a class="dropdown-item" ref="#">Content Marketing</a>
+                                <a class="dropdown-item" ref="#">Video Marketing</a>
+                                <a class="dropdown-item" ref="#">Email Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Analytics</a>
+                                <a class="dropdown-item" ref="#">Crowdfunding</a>
+                                <a class="dropdown-item" ref="#">Poster Design</a>
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                                <a class="dropdown-item" ref="#">Community Management</a>
+                                <a class="dropdown-item" ref="#">Mobile App Marketing</a>
+                                <a class="dropdown-item" ref="#">Music Promotion</a>
+                                <a class="dropdown-item" ref="#">Book & eBook Marketing</a>
+                                <a class="dropdown-item" ref="#">Affiliate Marketing</a>
+                                <a class="dropdown-item" ref="#">Podcast Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Traffic</a>
+                                <a class="dropdown-item" ref="#">Other</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- D6 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Programming & Tech</button>
+                    <div class="dropdown-content0 gridright">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                                <a class="dropdown-item" ref="#">Public Relations</a>
+                                <a class="dropdown-item" ref="#">Content Marketing</a>
+                                <a class="dropdown-item" ref="#">Video Marketing</a>
+                                <a class="dropdown-item" ref="#">Email Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Analytics</a>
+                                <a class="dropdown-item" ref="#">Crowdfunding</a>
+                                <a class="dropdown-item" ref="#">Poster Design</a>
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                                <a class="dropdown-item" ref="#">Community Management</a>
+                                <a class="dropdown-item" ref="#">Mobile App Marketing</a>
+                                <a class="dropdown-item" ref="#">Music Promotion</a>
+                                <a class="dropdown-item" ref="#">Book & eBook Marketing</a>
+                                <a class="dropdown-item" ref="#">Affiliate Marketing</a>
+                                <a class="dropdown-item" ref="#">Podcast Marketing</a>
+                                <a class="dropdown-item" ref="#">Web Traffic</a>
+                                <a class="dropdown-item" ref="#">Other</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- D7 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Data</button>
+                    <div class="dropdown-content0 gridright">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+    
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- D8 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Business</button>
+                    <div class="dropdown-content0 gridright">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+    
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- D9 -->
+                <div class="subNavbarDropdown">
+                    <button class="dropbtn0">Lifestyle</button>
+                    <div class="dropdown-content0 gridright">
+                        <div class="grid2col">
+                            <!-- Col 1 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Marketing Strategy</a>
+                                <a class="dropdown-item" ref="#">Social Media Advertising</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+    
+                            </div>
+                            <!-- Col 2 -->
+                            <div class="w-100">
+                                <a class="dropdown-item" ref="#">Search Engine Marketing (SEM)</a>
+                                <a class="dropdown-item" ref="#">Display Advertising</a>
+                                <a class="dropdown-item" ref="#">Influencer Marketing</a>
+                                <a class="dropdown-item" ref="#">Search Engine Optimization (SEO)</a>
+                                <a class="dropdown-item" ref="#">Local SEO</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+    
+        </nav>
+    
+    </header>
+    
+    <section class="carouselMain">
+        <div class="carousel__top">
+            <div class="carousel__header">
+                <h1 class="mb-4" style="color: white;"> Find the perfect <i>freelance</i><br> services for your business
+                </h1>
+                <form class="form-inline w-100 pr-5">
+                    <label class="sr-only" for="inlineFormInputName2">Search</label>
+                    <input type="text" class="form-control h-100" id="inlineFormInputName2"
+                        placeholder="Try 'building mobile app'">
+    
+                    <button type="submit" class="btn h-100">Search</button>
+                </form>
+                <div class="popular__search mt-4">
+                    <p>Popular:</p>
+                    <button class="btn ml-3 py-1 px-3"><b> Web Design</b></button>
+                    <button class="btn ml-3 py-1 px-3"><b> Word Press</b></button>
+                    <button class="btn ml-3 py-1 px-3"><b> Logo Design</b></button>
+                    <button class="btn ml-3 py-1 px-3"><b> Drop Shipping</b></button>
+                </div>
+            </div>
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-color: #7d1a00;">
+                        <img src="./Picture/bg-hero-gabrielle-1792-x1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block pr-5">
+                            <h5 style="color: white;">Gabrielle, <b>Video Editor</b></h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-color: #023a15;">
+                        <img src="./Picture/bg-hero-andrea-1792-x1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block pr-5">
+                            <h5 style="color: white;">Andrea, <b>Fashion Designer</b></h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-color: #023a15;">
+                        <img src="./Picture/bg-hero-zach-1792-x1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block pr-5">
+                            <h5 style="color: white;">Zach, <b>Bar owner</b></h5>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="carousel__logo w-100">
+            <div class="carousel__trustedby h-100 w-50 m-auto">
+                <p>Trusted by:</p>
+                <img src="./Picture/facebookIcon.png" alt="">
+                <img src="./Picture/googleIcon.png" alt="">
+                <img src="./Picture/netflixIcon.png" alt="">
+                <img src="./Picture/pandgIcon.png" alt="">
+                <img src="./Picture/paypalIcon.png" alt="">
+            </div>
+    
+        </div>
+    </section>
+    
+    <section class="service indent__horizontal py-5">
+        <h2>Popular professional services</h2>
+        <div class="service__slider">
+            <!-- <button class="slick-arrow slick-prev"></button> -->
+            <div class="service__slider-content">
+                <!-- Main 5 -->
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Unlock growth online</small><br>SEO
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png 2x">
+                            <img alt="SEO" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Color your dreams</small><br>Illustration
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png 2x">
+                            <img alt="Illustration" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Go global</small><br>Translation
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png 2x">
+                            <img alt="Translation" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Learn your business</small><br>Data Entry
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png 2x">
+                            <img alt="Data Entry" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Showcase your story</small><br>Book Covers
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png 2x">
+                            <img alt="Book Covers" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png">
+                        </picture>
+                    </a>
+                </div>
+    
+                <!-- Next 5 -->
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Build your brand</small><br>Logo Design
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png 2x">
+                            <img alt="Logo Design" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Customize your site</small><br>WordPress
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png 2x">
+                            <img alt="WordPress" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4><small>Share your message</small><br>Voice Over</h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png 2x">
+                            <img alt="Voice Over" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4>
+                            <small>Engage your audience</small><br>Video Explainer
+                        </h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png 2x">
+                            <img alt="Video Explainer" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <div class="service__content">
+                    <a href="#">
+                        <h4><small>Reach more customers</small><br>Social Media</h4>
+                        <picture>
+                            <source media="(min-width: 1060px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 2x">
+                            <source media="(min-width: 800px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_305,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 2x">
+                            <source media="(min-width: 600px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_360,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 2x">
+                            <source media="(max-width: 599px)"
+                                srcset="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 1x, https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png 2x">
+                            <img alt="Social Media" class="service__img"
+                                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png">
+                        </picture>
+                    </a>
+                </div>
+                <!-- End -->
+    
+            </div>
+        </div>
+        <!-- <button class="slick-arrow slick-next"></button> -->
+        </div>
+    
+    </section>
+    
+    <section class="freelance__talent indent__horizontal">
+        <div class="freelance__heading pr-5">
+            <h2>A whole world of freelance talent at your fingertips</h2>
+            <div class="freelance__item">
+                <h3>
+                    <i class="far fa-check-circle"> <b>The best for every budget</b></i>
+                </h3>
+                <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+            </div>
+            <div class="freelance__item">
+                <h3>
+                    <i class="far fa-check-circle"> <b>Quality work done quickly</b></i>
+                </h3>
+                <p>Find the right freelancer to begin working on your project within minutes.</p>
+            </div>
+            <div class="freelance__item">
+                <h3>
+                    <i class="far fa-check-circle"> <b>Protected payments, every time</b></i>
+                </h3>
+                <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
+            </div>
+            <div class="freelance__item">
+                <h3>
+                    <i class="far fa-check-circle"> <b>24/7 support</b></i>
+                </h3>
+                <p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
+            </div>
+        </div>
+        <div class="freelance__video my-5">
+            <div class="video__layer mx-auto">
+                <img alt="Video teaser image"
+                    src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_700,dpr_1.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png"
+                    loading="auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa far-play-circle"></i>
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    
+                        <div class="modal-content">
+                            <video class="m-auto"
+                                src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7"
+                                type="video/mp4" width="700px" height="449px" controls preload="metadata"></video>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="marketplace indent__horizontal py-5">
+        <h2>Explore the marketplace</h2>
+        <ul class="categories-list">
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg"
+                        alt="Graphics & Design">Graphics & Design</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg"
+                        alt="Digital Marketing">Digital Marketing</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg"
+                        alt="Writing & Translation">Writing & Translation</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg"
+                        alt="Video & Animation">Video & Animation</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg"
+                        alt="Music & Audio">Music & Audio</a></li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg"
+                        alt="Programming & Tech">Programming & Tech</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg"
+                        alt="Business">Business</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
+                        alt="Lifestyle">Lifestyle</a>
+            </li>
+            <li><a href="#">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/data.718910f.svg"
+                        alt="Data">Data</a>
+            </li>
+            <li></li>
+        </ul>
+    </section>
+    
+    <section class="business indent__horizontal py-5">
+        <div class="business__left">
+            <span class="business__logo" style="font-size: 26px;">
+                <b>fiverr</b> business.
+                <small class="newText">NEW</small>
+            </span>
+            <h2 class="mt-4" style="color: white;">A business solution designed for <i>teams</i></h2>
+            <p style="font-size: 18px;" class="my-4">Upgrade to a curated experience packed with tools and benefits,
+                dedicated to businesses</p>
+            <ul>
+                <li>
+                    <i class="far fa-check-circle"></i>
+                    <span>Connect to freelancers with proven business experience</span>
+                </li>
+                <li>
+                    <i class="far fa-check-circle"></i>
+                    <span>Get matched with the perfect talent by a customer success manager</span>
+                </li>
+                <li>
+                    <i class="far fa-check-circle"></i>
+                    <span> Manage teamwork and boost productivity with one powerful workspace</span>
+                </li>
+            </ul>
+            <button type="submit" class="btn h-100">Explore Fiverr Business</button>
+        </div>
+        <div class="business__right">
+            <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_1.0/v1/attachments/generic_asset/asset/d9c17ceebda44764b591a8074a898e63-1599597624757/business-desktop-870-x1.png"
+                alt="">
+        </div>
+    </section>
+
+
     <section class="testimonial"></section>
     <section class="logoMaker"></section>
     <section class="inspired"></section>
     <section class="guides"></section>
     <section class="started"></section>
     <footer></footer>
+
+    <!-- All JS Packages/Library Here! -->
+    <!-- Jquery-3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap v4.6 Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <!-- Slick 1.8.1 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+        integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- All JS Scripts for function Here! -->
+        <!-- Change navbar onscroll -->
+    <!-- Show subNavbar onscroll -->
+    <script>
+        // When the user scrolls down 50px from the top of the document, change the background color of the navbar
+        // When the user scrolls down 200px from the top of the document, hide the subNavbar
+        // When the user scrolls to the top of the page, style the subNavber to visibility 'hidden'
+        window.onscroll = function () { scrollToShowSubNavbar() };
+
+        function scrollToShowSubNavbar() {
+            if ((document.documentElement.scrollTop > 50 && document.documentElement.scrollTop < 200) || (document.body.scrollTop < 200 && document.body.scrollTop > 50)) {
+                document.getElementById("navbarMain").style.backgroundColor = "white";
+                document.getElementById("navbarMain").style.color = "black";
+                // document.getElementsByClassName("nav-link").style.color = "black";
+
+                document.getElementById("subNavbar").style.visibility = "hidden";
+                document.getElementById("formOnScroll").style.visibility = "hidden";
+                // alert('50');
+            }
+            else if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
+
+                document.getElementById("navbarMain").style.backgroundColor = "white";
+                document.getElementById("navbarMain").style.color = "black";
+                // document.getElementsById("listChangeColor").style.color = "black";
+
+                document.getElementById("subNavbar").style.visibility = "visible";
+                document.getElementById("formOnScroll").style.visibility = "visible";
+                // alert('200');
+            }
+
+            else {
+                document.getElementById("subNavbar").style.visibility = "hidden";
+                document.getElementById("formOnScroll").style.visibility = "hidden";
+                document.getElementById("navbarMain").style.backgroundColor = "rgba(0, 0, 0, 0)";
+                document.getElementById("navbarMain").style.color = "white";
+            }
+        }
+    </script>
+    <!-- Slick script for Service Slider -->
+    <script>
+        $('.service__slider-content').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            dots: false,
+            arrows: true,
+            autoplay: false,
+            autoplaySpeed: 2000,
+
+            prevArrow: '<i class="fa fa-angle-left left"></i>',
+            nextArrow: '<i class="fa fa-angle-right right"></i>'
+
+        });
+    </script>
+
 </body>
 </html>
